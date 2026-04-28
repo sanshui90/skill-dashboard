@@ -33,25 +33,6 @@
             max-width: 1400px;
             margin: 0 auto;
             padding: 20px;
-            text-align: center;
-        }
-        .stats-bar, .filter-bar, .skill-list {
-            text-align: left;
-        }
-        .result-stats {
-            background: white;
-            padding: 12px 20px;
-            border-radius: 8px;
-            margin-bottom: 15px;
-            box-shadow: 0 2px 8px rgba(0,0,0,0.05);
-        }
-        .result-stats .stats-text {
-            color: #666;
-            font-size: 0.9em;
-        }
-        .result-stats strong {
-            color: #667eea;
-            font-size: 1.2em;
         }
         .stats-bar {
             display: grid;
@@ -160,13 +141,6 @@
             padding: 2px 8px;
             border-radius: 10px;
         }
-        
-        .skill-tags {
-            display: flex;
-            align-items: center;
-            gap: 8px;
-        }
-
         .skill-category {
             background: #e8f4f8;
             color: #0066cc;
@@ -223,26 +197,7 @@
             align-items: center;
             gap: 4px;
         }
-        .usage-count {
-            display: inline-flex;
-            align-items: center;
-            gap: 4px;
-            background: #e8f5e9;
-            color: #2e7d32;
-            padding: 4px 12px;
-            border-radius: 12px;
-            font-size: 0.85em;
-            font-weight: 500;
-        }
-        .usage-count.zero {
-            background: #f5f5f5;
-            color: #999;
-        }
-        .usage-label {
-            font-size: 0.75em;
-            color: #999;
-            margin-right: 8px;
-        }
+        .usage-badge {
             background: #e8f5e9;
             color: #2e7d32;
             padding: 4px 10px;
@@ -273,7 +228,7 @@
 <body>
     <div class="header">
         <h1>📊 OpenClaw Skill 详细看板</h1>
-        <div class="meta">生成时间：2026-04-28 19:53 | 总计 <strong>39 个 Skill</strong>（主 33 + 子 4 + 工作区 2）</div>
+        <div class="meta">生成时间：2026-04-28 11:12 | 总计 <strong>39 个 Skill</strong>（主 32 + 子 4 + 工作区 2）</div>
     </div>
 
     <div class="container">
@@ -315,162 +270,127 @@
         </div>
 
         <div class="skill-list" id="skillList">
-
-<!-- agent-browser -->
-<div class="skill-card" data-category="dev" data-name="agent-browser">
+<div class="skill-card" data-category="system" data-name="skill-dashboard">
     <div class="skill-header">
-        <div class="skill-name">🌐 agent-browser</div>
-    <div class="skill-tags">
-        <span class="skill-location location-main">主</span>
-        <span class="skill-category">开发工具</span>
+        <div class="skill-name">📊 skill-dashboard</div>
+        <span class="skill-category">系统管理</span>
     </div>
-</div>
-    <div class="skill-desc">浏览器自动化 CLI。用于网站交互、导航、填表、点击按钮、截图、数据抓取、测试 Web 应用等需要程序化浏览器操作的场景。</div>
+    <div class="skill-desc">生成/更新 OpenClaw 已安装 Skill 的详细看板，部署到固定的 GitHub Pages 地址。</div>
     <div class="skill-meta">
         <div class="meta-item">
             <span class="meta-label">触发词</span>
             <div class="trigger-list">
-                <span class="trigger-tag">打开网站</span>
-                <span class="trigger-tag">填表</span>
-                <span class="trigger-tag">截图</span>
-                <span class="trigger-tag">抓取数据</span>
-                <span class="trigger-tag">浏览器自动化</span>
+                <span class="trigger-tag">更新看板</span>
+                <span class="trigger-tag">生成技能看板</span>
+                <span class="trigger-tag">看板统计</span>
+                <span class="trigger-tag">技能统计</span>
             </div>
         </div>
         <div class="meta-item">
             <span class="meta-label">使用场景</span>
-            <span class="meta-value">打开网站、自动填表、抓取页面、测试 Web 应用、登录站点、截图留档</span>
+            <span class="meta-value">查看已安装 Skill 清单、统计 Skill 信息、生成分享链接、定期更新看板</span>
         </div>
         <div class="meta-item">
             <span class="meta-label">时间信息</span>
             <div class="time-info">
-                <span>📅 创建: 2026-03-13</span>
-                <span>✏️ 更新: 2026-04-22</span>
-            <span class="usage-count zero">💤 未使用</span></div></div></div></div>
-
-<!-- baidu-search -->
-<div class="skill-card" data-category="search" data-name="baidu-search">
-    <div class="skill-header">
-        <div class="skill-name">🔍 baidu-search</div>
-    <div class="skill-tags">
-        <span class="skill-location location-main">主</span>
-        <span class="skill-category">网络搜索</span>
+                <span>📅 创建: 2026-04-28</span>
+                <span>✏️ 更新: 2026-04-28</span>
+            </div>
+        </div>
     </div>
 </div>
-    <div class="skill-desc">使用百度 AI 搜索引擎（BDSE）进行网页搜索，支持关键词查询、时间范围过滤、结果数量控制。</div>
+
+<div class="skill-card" data-category="wecom" data-name="team-weekly-report">
+    <div class="skill-header">
+        <div class="skill-name">📊 team-weekly-report</div>
+        <span class="skill-category">企业微信</span>
+    </div>
+    <div class="skill-desc">生成业务二组人员投入周报，包含任务投入分析和售后 Bug 分析，支持创建企微在线文档。</div>
     <div class="skill-meta">
         <div class="meta-item">
             <span class="meta-label">触发词</span>
             <div class="trigger-list">
-                <span class="trigger-tag">搜索</span>
-                <span class="trigger-tag">百度搜索</span>
-                <span class="trigger-tag">联网搜索</span>
+                <span class="trigger-tag">生成周报</span>
+                <span class="trigger-tag">业务二组周报</span>
+                <span class="trigger-tag">人员投入报告</span>
             </div>
         </div>
         <div class="meta-item">
             <span class="meta-label">使用场景</span>
-            <span class="meta-value">获取最新资讯、搜索特定主题资料、时间范围内信息检索、批量搜索</span>
+            <span class="meta-value">周报生成、人员投入分析、Bug 统计、在线文档创建</span>
         </div>
         <div class="meta-item">
             <span class="meta-label">时间信息</span>
             <div class="time-info">
-                <span>📅 创建: 2026-03-15</span>
-                <span>✏️ 更新: 2026-03-15</span>
-            <span class="usage-count zero">💤 未使用</span></div></div></div></div>
-
-<!-- bank-moments-copywriter -->
-<div class="skill-card" data-category="business" data-name="bank-moments-copywriter">
-    <div class="skill-header">
-        <div class="skill-name">💬 bank-moments-copywriter</div>
-    <div class="skill-tags">
-        <span class="skill-location location-main">主</span>
-        <span class="skill-category">业务场景</span>
+                <span>📅 创建: 2026-04-17</span>
+                <span>✏️ 更新: 2026-04-24</span>
+            </div>
+        </div>
     </div>
 </div>
-    <div class="skill-desc">生成银行产品朋友圈文案，强调强互动、强网感、强合规，严格满足 5 行内、每行小于 25 字的排版限制。</div>
+
+<div class="skill-card" data-category="wecom" data-name="scrm-admin">
+    <div class="skill-header">
+        <div class="skill-name">👥 scrm-admin</div>
+        <span class="skill-category">企业微信</span>
+    </div>
+    <div class="skill-desc">SCRM 开放平台能力，支持查询客户、员工、客户群、群发任务、SOP、素材、待办、客服等。</div>
     <div class="skill-meta">
         <div class="meta-item">
             <span class="meta-label">触发词</span>
             <div class="trigger-list">
-                <span class="trigger-tag">朋友圈文案</span>
-                <span class="trigger-tag">银行营销</span>
-                <span class="trigger-tag">营销文案</span>
+                <span class="trigger-tag">SCRM</span>
+                <span class="trigger-tag">客户</span>
+                <span class="trigger-tag">员工</span>
+                <span class="trigger-tag">群发</span>
+                <span class="trigger-tag">SOP</span>
             </div>
         </div>
         <div class="meta-item">
             <span class="meta-label">使用场景</span>
-            <span class="meta-value">银行产品推广、活动预热、客户经营文案、理财营销、合规改写</span>
+            <span class="meta-value">SCRM 数据查询、客户管理、员工管理、群发任务、素材管理</span>
         </div>
         <div class="meta-item">
             <span class="meta-label">时间信息</span>
             <div class="time-info">
-                <span>📅 创建: 2026-03-17</span>
-                <span>✏️ 更新: 2026-03-17</span>
-            <span class="usage-count zero">💤 未使用</span></div></div></div></div>
-
-<!-- claw-ppt-generator -->
-<div class="skill-card" data-category="doc" data-name="claw-ppt-generator">
-    <div class="skill-header">
-        <div class="skill-name">📊 claw-ppt-generator</div>
-    <div class="skill-tags">
-        <span class="skill-location location-main">主</span>
-        <span class="skill-category">文档内容</span>
+                <span>📅 创建: 2026-03-20</span>
+                <span>✏️ 更新: 2026-03-20</span>
+            </div>
+        </div>
     </div>
 </div>
-    <div class="skill-desc">生成 PPT 到企微管家客户端 AI PPT 模块，可在历史记录中查看、编辑、导出、分享。</div>
+
+<div class="skill-card" data-category="wecom" data-name="scrm">
+    <div class="skill-header">
+        <div class="skill-name">👥 scrm</div>
+        <span class="skill-category">企业微信</span>
+    </div>
+    <div class="skill-desc">查询和管理微盛企微管家 SCRM 中的客户信息、客户标签、客户群、营销素材、活码、群发、跟进记录等。</div>
     <div class="skill-meta">
         <div class="meta-item">
             <span class="meta-label">触发词</span>
             <div class="trigger-list">
-                <span class="trigger-tag">生成PPT</span>
-                <span class="trigger-tag">做一个PPT</span>
-                <span class="trigger-tag">帮我做PPT</span>
-                <span class="trigger-tag">创建演示文稿</span>
+                <span class="trigger-tag">客户信息</span>
+                <span class="trigger-tag">客户标签</span>
+                <span class="trigger-tag">客户群</span>
+                <span class="trigger-tag">跟进记录</span>
+                <span class="trigger-tag">会话存档</span>
             </div>
         </div>
         <div class="meta-item">
             <span class="meta-label">使用场景</span>
-            <span class="meta-value">快速生成演示文稿、工作汇报、产品介绍、培训材料</span>
+            <span class="meta-value">客户运营、社群营销、SCRM 管理、会话管理、商机跟进</span>
         </div>
         <div class="meta-item">
             <span class="meta-label">时间信息</span>
             <div class="time-info">
-                <span>📅 创建: 2026-04-22</span>
-                <span>✏️ 更新: 2026-04-22</span>
-            <span class="usage-count zero">💤 未使用</span></div></div></div></div>
-
-<!-- coze-app-reply -->
-<div class="skill-card" data-category="doc" data-name="coze-app-reply">
-    <div class="skill-header">
-        <div class="skill-name">🤖 coze-app-reply</div>
-    <div class="skill-tags">
-        <span class="skill-location location-main">主</span>
-        <span class="skill-category">文档内容</span>
+                <span>📅 创建: 2026-04-21</span>
+                <span>✏️ 更新: 2026-04-21</span>
+            </div>
+        </div>
     </div>
 </div>
-    <div class="skill-desc">调用 Coze（扣子）已发布为 API 服务的应用/智能体，发送用户消息并获取 AI 回复。</div>
-    <div class="skill-meta">
-        <div class="meta-item">
-            <span class="meta-label">触发词</span>
-            <div class="trigger-list">
-                <span class="trigger-tag">调用 Coze 应用</span>
-                <span class="trigger-tag">问扣子</span>
-                <span class="trigger-tag">Coze API 回复</span>
-                <span class="trigger-tag">使用 Coze 智能体</span>
-            </div>
-        </div>
-        <div class="meta-item">
-            <span class="meta-label">使用场景</span>
-            <span class="meta-value">调用 Coze 应用生成文案、摘要、问答；调试 Coze API</span>
-        </div>
-        <div class="meta-item">
-            <span class="meta-label">时间信息</span>
-            <div class="time-info">
-                <span>📅 创建: 2026-03-12</span>
-                <span>✏️ 更新: 2026-03-12</span>
-            <span class="usage-count zero">💤 未使用</span></div></div></div></div>
 
-<!-- daily-report-summary -->
 <div class="skill-card" data-category="business" data-name="daily-report-summary">
     <div class="skill-header">
         <div class="skill-name">📊 daily-report-summary</div>
@@ -501,139 +421,222 @@
                 <span>✏️ 更新: 2026-04-28</span>
             <span class="usage-count">📊 2 次</span></div></div></div></div>
 
-<!-- daily-quote -->
-<div class="skill-card" data-category="business" data-name="daily-quote">
+<div class="skill-card" data-category="business" data-name="software-copyright">
     <div class="skill-header">
-        <div class="skill-name">💬 daily-quote</div>
-    <div class="skill-tags">
-        <span class="skill-location location-main">主</span>
+        <div class="skill-name">📜 software-copyright</div>
         <span class="skill-category">业务场景</span>
     </div>
-</div>
-    <div class="skill-desc">每日名言推送，提供励志语录和金句。</div>
+    <div class="skill-desc">生成软件著作权申请材料，包括登记信息表、操作手册、源代码文档（10000-15000 行，200-350 页）。</div>
     <div class="skill-meta">
         <div class="meta-item">
             <span class="meta-label">触发词</span>
             <div class="trigger-list">
-                <span class="trigger-tag">今日名言</span>
-                <span class="trigger-tag">来句名言</span>
-                <span class="trigger-tag">励志语录</span>
-                <span class="trigger-tag">每日金句</span>
+                <span class="trigger-tag">申请软著</span>
+                <span class="trigger-tag">生成软著材料</span>
+                <span class="trigger-tag">软著申请</span>
+                <span class="trigger-tag">软著操作手册</span>
             </div>
         </div>
         <div class="meta-item">
             <span class="meta-label">使用场景</span>
-            <span class="meta-value">获取励志名言、每日推送、社交分享</span>
+            <span class="meta-value">软件著作权申请、登记表生成、操作手册编写、源码文档整理</span>
         </div>
         <div class="meta-item">
             <span class="meta-label">时间信息</span>
             <div class="time-info">
-                <span>📅 创建: 2026-03-21</span>
-                <span>✏️ 更新: 2026-03-21</span>
-            <span class="usage-count zero">💤 未使用</span></div></div></div></div>
-
-<!-- dokie-ai-ppt -->
-<div class="skill-card" data-category="doc" data-name="dokie-ai-ppt">
-    <div class="skill-header">
-        <div class="skill-name">📊 dokie-ai-ppt</div>
-    <div class="skill-tags">
-        <span class="skill-location location-main">主</span>
-        <span class="skill-category">文档内容</span>
+                <span>📅 创建: 2026-04-22</span>
+                <span>✏️ 更新: 2026-04-23</span>
+            </div>
+        </div>
     </div>
 </div>
-    <div class="skill-desc">AI 演示文稿生成器，通过对话创建专业 HTML 幻灯片。</div>
+
+<div class="skill-card" data-category="dev" data-name="quick-html-deploy">
+    <div class="skill-header">
+        <div class="skill-name">🚀 quick-html-deploy</div>
+        <span class="skill-category">开发工具</span>
+    </div>
+    <div class="skill-desc">快速将现成 HTML 内容部署到 EdgeOne Pages 并返回可分享链接。</div>
     <div class="skill-meta">
         <div class="meta-item">
             <span class="meta-label">触发词</span>
             <div class="trigger-list">
-                <span class="trigger-tag">create PPT</span>
-                <span class="trigger-tag">presentation</span>
-                <span class="trigger-tag">slides</span>
-                <span class="trigger-tag">keynote</span>
-                <span class="trigger-tag">pitch deck</span>
+                <span class="trigger-tag">部署 HTML</span>
+                <span class="trigger-tag">发布网页</span>
+                <span class="trigger-tag">生成在线链接</span>
+                <span class="trigger-tag">把 HTML 发到网上</span>
             </div>
         </div>
         <div class="meta-item">
             <span class="meta-label">使用场景</span>
-            <span class="meta-value">制作演示文稿、将 PPTX 转为网页、创建带动画的展示页</span>
+            <span class="meta-value">分享 AI 生成网页、快速上线单页 HTML、在线预览链接</span>
         </div>
         <div class="meta-item">
             <span class="meta-label">时间信息</span>
             <div class="time-info">
-                <span>📅 创建: 2026-03-12</span>
-                <span>✏️ 更新: 2026-03-12</span>
-            <span class="usage-count zero">💤 未使用</span></div></div></div></div>
+                <span>📅 创建: 2026-04-01</span>
+                <span>✏️ 更新: 2026-04-01</span>
+            </div>
+        </div>
+    </div>
+</div>
 
-<!-- edgeone-clawscan -->
-<div class="skill-card" data-category="system" data-name="edgeone-clawscan">
+<div class="skill-card" data-category="system" data-name="skill-creator">
     <div class="skill-header">
-        <div class="skill-name">🔒 edgeone-clawscan</div>
-    <div class="skill-tags">
-        <span class="skill-location location-main">主</span>
+        <div class="skill-name">🛠️ skill-creator</div>
         <span class="skill-category">系统管理</span>
     </div>
-</div>
-    <div class="skill-desc">安全扫描技能，安装新 Skill 前自动进行安全检查，像杀毒软件一样保护 AI 环境。</div>
+    <div class="skill-desc">创建新 Skill、修改和优化现有 Skill，支持测试用例、基准评测与触发词优化。</div>
     <div class="skill-meta">
         <div class="meta-item">
             <span class="meta-label">触发词</span>
             <div class="trigger-list">
-                <span class="trigger-tag">安全扫描</span>
-                <span class="trigger-tag">全面安全检查</span>
-                <span class="trigger-tag">检查 OpenClaw 安全</span>
+                <span class="trigger-tag">创建skill</span>
+                <span class="trigger-tag">优化skill</span>
+                <span class="trigger-tag">编辑skill</span>
+                <span class="trigger-tag">测试skill</span>
             </div>
         </div>
         <div class="meta-item">
             <span class="meta-label">使用场景</span>
-            <span class="meta-value">安装新 Skill 前安全检查、定期安全审计、权限审查</span>
+            <span class="meta-value">从零设计新 Skill、补全 SKILL.md、增加评测、优化触发词</span>
+        </div>
+        <div class="meta-item">
+            <span class="meta-label">时间信息</span>
+            <div class="time-info">
+                <span>📅 创建: 2026-03-27</span>
+                <span>✏️ 更新: 2026-03-27</span>
+            </div>
+        </div>
+    </div>
+</div>
+
+<div class="skill-card" data-category="dev" data-name="github">
+    <div class="skill-header">
+        <div class="skill-name">🐙 github</div>
+        <span class="skill-category">开发工具</span>
+    </div>
+    <div class="skill-desc">使用 gh CLI 操作 GitHub，支持 issues、PRs、CI 运行和高级 API 查询。</div>
+    <div class="skill-meta">
+        <div class="meta-item">
+            <span class="meta-label">触发词</span>
+            <div class="trigger-list">
+                <span class="trigger-tag">GitHub</span>
+                <span class="trigger-tag">issue</span>
+                <span class="trigger-tag">PR</span>
+                <span class="trigger-tag">CI</span>
+            </div>
+        </div>
+        <div class="meta-item">
+            <span class="meta-label">使用场景</span>
+            <span class="meta-value">查看和管理 PR、检查 CI 状态、查询工作流、高级 API 查询</span>
+        </div>
+        <div class="meta-item">
+            <span class="meta-label">时间信息</span>
+            <div class="time-info">
+                <span>📅 创建: 2026-03-15</span>
+                <span>✏️ 更新: 2026-03-15</span>
+            </div>
+        </div>
+    </div>
+</div>
+
+<div class="skill-card" data-category="dev" data-name="github-pages-deploy">
+    <div class="skill-header">
+        <div class="skill-name">🚀 github-pages-deploy</div>
+        <span class="skill-category">开发工具</span>
+    </div>
+    <div class="skill-desc">部署 HTML 网页到 GitHub Pages，自动创建仓库并返回公开链接。</div>
+    <div class="skill-meta">
+        <div class="meta-item">
+            <span class="meta-label">触发词</span>
+            <div class="trigger-list">
+                <span class="trigger-tag">部署网页</span>
+                <span class="trigger-tag">发布网页</span>
+                <span class="trigger-tag">把HTML发成链接</span>
+                <span class="trigger-tag">生成网页链接</span>
+            </div>
+        </div>
+        <div class="meta-item">
+            <span class="meta-label">使用场景</span>
+            <span class="meta-value">部署单页 HTML、发布网页项目、创建在线演示</span>
         </div>
         <div class="meta-item">
             <span class="meta-label">时间信息</span>
             <div class="time-info">
                 <span>📅 创建: 2026-03-21</span>
                 <span>✏️ 更新: 2026-03-21</span>
-            <span class="usage-count zero">💤 未使用</span></div></div></div></div>
-
-<!-- excalidraw-presentation-generator -->
-<div class="skill-card" data-category="image" data-name="excalidraw-presentation-generator">
-    <div class="skill-header">
-        <div class="skill-name">🎨 excalidraw-presentation-generator</div>
-    <div class="skill-tags">
-        <span class="skill-location location-main">主</span>
-        <span class="skill-category">图像设计</span>
+            </div>
+        </div>
     </div>
 </div>
-    <div class="skill-desc">创建专业的 Excalidraw 演示文稿和图表，适合技术讲解、教学材料、流程说明。</div>
+
+<div class="skill-card" data-category="doc" data-name="claw-ppt-generator">
+    <div class="skill-header">
+        <div class="skill-name">📊 claw-ppt-generator</div>
+        <span class="skill-category">文档内容</span>
+    </div>
+    <div class="skill-desc">生成 PPT 到企微管家客户端 AI PPT 模块，可在历史记录中查看、编辑、导出、分享。</div>
     <div class="skill-meta">
         <div class="meta-item">
             <span class="meta-label">触发词</span>
             <div class="trigger-list">
+                <span class="trigger-tag">生成PPT</span>
+                <span class="trigger-tag">做一个PPT</span>
+                <span class="trigger-tag">帮我做PPT</span>
                 <span class="trigger-tag">创建演示文稿</span>
-                <span class="trigger-tag">生成 Excalidraw</span>
-                <span class="trigger-tag">画个架构图</span>
-                <span class="trigger-tag">做个示意图</span>
             </div>
         </div>
         <div class="meta-item">
             <span class="meta-label">使用场景</span>
-            <span class="meta-value">技术演示、教学培训、架构图、流程图、概念示意图</span>
+            <span class="meta-value">快速生成演示文稿、工作汇报、产品介绍、培训材料</span>
         </div>
         <div class="meta-item">
             <span class="meta-label">时间信息</span>
             <div class="time-info">
-                <span>📅 创建: 2026-03-14</span>
-                <span>✏️ 更新: 2026-03-14</span>
-            <span class="usage-count zero">💤 未使用</span></div></div></div></div>
+                <span>📅 创建: 2026-04-22</span>
+                <span>✏️ 更新: 2026-04-22</span>
+            </div>
+        </div>
+    </div>
+</div>
 
-<!-- fireworks-tech-graph -->
+<div class="skill-card" data-category="dev" data-name="agent-browser">
+    <div class="skill-header">
+        <div class="skill-name">🌐 agent-browser</div>
+        <span class="skill-category">开发工具</span>
+    </div>
+    <div class="skill-desc">浏览器自动化 CLI。用于网站交互、导航、填表、点击按钮、截图、数据抓取、测试 Web 应用等需要程序化浏览器操作的场景。</div>
+    <div class="skill-meta">
+        <div class="meta-item">
+            <span class="meta-label">触发词</span>
+            <div class="trigger-list">
+                <span class="trigger-tag">打开网站</span>
+                <span class="trigger-tag">填表</span>
+                <span class="trigger-tag">截图</span>
+                <span class="trigger-tag">抓取数据</span>
+                <span class="trigger-tag">浏览器自动化</span>
+            </div>
+        </div>
+        <div class="meta-item">
+            <span class="meta-label">使用场景</span>
+            <span class="meta-value">打开网站、自动填表、抓取页面、测试 Web 应用、登录站点、截图留档</span>
+        </div>
+        <div class="meta-item">
+            <span class="meta-label">时间信息</span>
+            <div class="time-info">
+                <span>📅 创建: 2026-03-13</span>
+                <span>✏️ 更新: 2026-04-22</span>
+            </div>
+        </div>
+    </div>
+</div>
+
 <div class="skill-card" data-category="image" data-name="fireworks-tech-graph">
     <div class="skill-header">
         <div class="skill-name">📊 fireworks-tech-graph</div>
-    <div class="skill-tags">
-        <span class="skill-location location-main">主</span>
         <span class="skill-category">图像设计</span>
     </div>
-</div>
     <div class="skill-desc">生成技术图表（架构图、流程图、序列图、Agent/内存图、概念图）并导出 SVG+PNG。</div>
     <div class="skill-meta">
         <div class="meta-item">
@@ -655,170 +658,16 @@
             <div class="time-info">
                 <span>📅 创建: 2026-04-16</span>
                 <span>✏️ 更新: 2026-04-16</span>
-            <span class="usage-count zero">💤 未使用</span></div></div></div></div>
-
-<!-- frontend-slides -->
-<div class="skill-card" data-category="doc" data-name="frontend-slides">
-    <div class="skill-header">
-        <div class="skill-name">📊 frontend-slides</div>
-    <div class="skill-tags">
-        <span class="skill-location location-main">主</span>
-        <span class="skill-category">文档内容</span>
-    </div>
-</div>
-    <div class="skill-desc">创建动画丰富的 HTML 演示文稿，支持从零生成或转换 PowerPoint 文件。</div>
-    <div class="skill-meta">
-        <div class="meta-item">
-            <span class="meta-label">触发词</span>
-            <div class="trigger-list">
-                <span class="trigger-tag">build presentation</span>
-                <span class="trigger-tag">convert PPTX</span>
-                <span class="trigger-tag">create slides</span>
             </div>
         </div>
-        <div class="meta-item">
-            <span class="meta-label">使用场景</span>
-            <span class="meta-value">制作演示文稿、PPTX 转网页、创建动画展示页</span>
-        </div>
-        <div class="meta-item">
-            <span class="meta-label">时间信息</span>
-            <div class="time-info">
-                <span>📅 创建: 2026-03-12</span>
-                <span>✏️ 更新: 2026-03-12</span>
-            <span class="usage-count zero">💤 未使用</span></div></div></div></div>
-
-<!-- github -->
-<div class="skill-card" data-category="dev" data-name="github">
-    <div class="skill-header">
-        <div class="skill-name">🐙 github</div>
-    <div class="skill-tags">
-        <span class="skill-location location-main">主</span>
-        <span class="skill-category">开发工具</span>
     </div>
 </div>
-    <div class="skill-desc">使用 gh CLI 操作 GitHub，支持 issues、PRs、CI 运行和高级 API 查询。</div>
-    <div class="skill-meta">
-        <div class="meta-item">
-            <span class="meta-label">触发词</span>
-            <div class="trigger-list">
-                <span class="trigger-tag">GitHub</span>
-                <span class="trigger-tag">issue</span>
-                <span class="trigger-tag">PR</span>
-                <span class="trigger-tag">CI</span>
-            </div>
-        </div>
-        <div class="meta-item">
-            <span class="meta-label">使用场景</span>
-            <span class="meta-value">查看和管理 PR、检查 CI 状态、查询工作流、高级 API 查询</span>
-        </div>
-        <div class="meta-item">
-            <span class="meta-label">时间信息</span>
-            <div class="time-info">
-                <span>📅 创建: 2026-03-15</span>
-                <span>✏️ 更新: 2026-03-15</span>
-            <span class="usage-count zero">💤 未使用</span></div></div></div></div>
 
-<!-- github-pages-deploy -->
-<div class="skill-card" data-category="dev" data-name="github-pages-deploy">
-    <div class="skill-header">
-        <div class="skill-name">🚀 github-pages-deploy</div>
-    <div class="skill-tags">
-        <span class="skill-location location-main">主</span>
-        <span class="skill-category">开发工具</span>
-    </div>
-</div>
-    <div class="skill-desc">部署 HTML 网页到 GitHub Pages，自动创建仓库并返回公开链接。</div>
-    <div class="skill-meta">
-        <div class="meta-item">
-            <span class="meta-label">触发词</span>
-            <div class="trigger-list">
-                <span class="trigger-tag">部署网页</span>
-                <span class="trigger-tag">发布网页</span>
-                <span class="trigger-tag">把HTML发成链接</span>
-                <span class="trigger-tag">生成网页链接</span>
-            </div>
-        </div>
-        <div class="meta-item">
-            <span class="meta-label">使用场景</span>
-            <span class="meta-value">部署单页 HTML、发布网页项目、创建在线演示</span>
-        </div>
-        <div class="meta-item">
-            <span class="meta-label">时间信息</span>
-            <div class="time-info">
-                <span>📅 创建: 2026-03-21</span>
-                <span>✏️ 更新: 2026-03-21</span>
-            <span class="usage-count">📊 1 次</span></div></div></div></div>
-
-<!-- humanize -->
-<div class="skill-card" data-category="doc" data-name="humanize">
-    <div class="skill-header">
-        <div class="skill-name">✍️ humanize</div>
-    <div class="skill-tags">
-        <span class="skill-location location-main">主</span>
-        <span class="skill-category">文档内容</span>
-    </div>
-</div>
-    <div class="skill-desc">将 AI 生成的文本转换为自然人类风格，绕过 GPTZero、Turnitin、Originality.ai 等检测器。</div>
-    <div class="skill-meta">
-        <div class="meta-item">
-            <span class="meta-label">触发词</span>
-            <div class="trigger-list">
-                <span class="trigger-tag">人类化</span>
-                <span class="trigger-tag">AI检测</span>
-                <span class="trigger-tag">润色</span>
-            </div>
-        </div>
-        <div class="meta-item">
-            <span class="meta-label">使用场景</span>
-            <span class="meta-value">润色 AI 草稿、优化论文语气、降低检测命中率、让文案更自然</span>
-        </div>
-        <div class="meta-item">
-            <span class="meta-label">时间信息</span>
-            <div class="time-info">
-                <span>📅 创建: 2026-03-13</span>
-                <span>✏️ 更新: 2026-03-13</span>
-            <span class="usage-count zero">💤 未使用</span></div></div></div></div>
-
-<!-- image-gen -->
-<div class="skill-card" data-category="image" data-name="image-gen">
-    <div class="skill-header">
-        <div class="skill-name">🖼️ image-gen</div>
-    <div class="skill-tags">
-        <span class="skill-location location-main">主</span>
-        <span class="skill-category">图像设计</span>
-    </div>
-</div>
-    <div class="skill-desc">AI 图像生成，支持 OpenAI、Google、阿里云、Replicate、OpenRouter、火山引擎等多平台。</div>
-    <div class="skill-meta">
-        <div class="meta-item">
-            <span class="meta-label">触发词</span>
-            <div class="trigger-list">
-                <span class="trigger-tag">画图</span>
-                <span class="trigger-tag">生成图片</span>
-                <span class="trigger-tag">AI作图</span>
-                <span class="trigger-tag">生成插画</span>
-            </div>
-        </div>
-        <div class="meta-item">
-            <span class="meta-label">使用场景</span>
-            <span class="meta-value">生成插画、封面图、配图、海报草图、参考图改写、批量生成</span>
-        </div>
-        <div class="meta-item">
-            <span class="meta-label">时间信息</span>
-            <div class="time-info">
-                <span>📅 创建: 2026-03-30</span>
-                <span>✏️ 更新: 2026-03-30</span>
-            <span class="usage-count zero">💤 未使用</span></div></div></div></div>
-
-<!-- page-static-gen -->
 <div class="skill-card" data-category="wecom" data-name="page-static-gen">
     <div class="skill-header">
         <div class="skill-name">📄 page-static-gen</div>
-    <div class="skill-tags">
-        <span class="skill-location location-main">主</span>
         <span class="skill-category">企业微信</span>
     </div>
-</div>
     <div class="skill-desc">生成微盛 SCRM 风格的 PC/H5 可交互、可批量、可回归的原型页面/demo。</div>
     <div class="skill-meta">
         <div class="meta-item">
@@ -839,17 +688,16 @@
             <div class="time-info">
                 <span>📅 创建: 2026-04-14</span>
                 <span>✏️ 更新: 2026-04-14</span>
-            <span class="usage-count zero">💤 未使用</span></div></div></div></div>
+            </div>
+        </div>
+    </div>
+</div>
 
-<!-- prd-gen-skill -->
 <div class="skill-card" data-category="wecom" data-name="prd-gen-skill">
     <div class="skill-header">
         <div class="skill-name">📝 prd-gen-skill</div>
-    <div class="skill-tags">
-        <span class="skill-location location-main">主</span>
         <span class="skill-category">企业微信</span>
     </div>
-</div>
     <div class="skill-desc">为微盛企微管家产品团队生成产品需求文档（PRD），涵盖 SCRM、CRM、商城、营销活动等所有业务领域。</div>
     <div class="skill-meta">
         <div class="meta-item">
@@ -870,48 +718,16 @@
             <div class="time-info">
                 <span>📅 创建: 2026-04-02</span>
                 <span>✏️ 更新: 2026-04-02</span>
-            <span class="usage-count zero">💤 未使用</span></div></div></div></div>
-
-<!-- quick-html-deploy -->
-<div class="skill-card" data-category="dev" data-name="quick-html-deploy">
-    <div class="skill-header">
-        <div class="skill-name">🚀 quick-html-deploy</div>
-    <div class="skill-tags">
-        <span class="skill-location location-main">主</span>
-        <span class="skill-category">开发工具</span>
-    </div>
-</div>
-    <div class="skill-desc">快速将现成 HTML 内容部署到 EdgeOne Pages 并返回可分享链接。</div>
-    <div class="skill-meta">
-        <div class="meta-item">
-            <span class="meta-label">触发词</span>
-            <div class="trigger-list">
-                <span class="trigger-tag">部署 HTML</span>
-                <span class="trigger-tag">发布网页</span>
-                <span class="trigger-tag">生成在线链接</span>
-                <span class="trigger-tag">把 HTML 发到网上</span>
             </div>
         </div>
-        <div class="meta-item">
-            <span class="meta-label">使用场景</span>
-            <span class="meta-value">分享 AI 生成网页、快速上线单页 HTML、在线预览链接</span>
-        </div>
-        <div class="meta-item">
-            <span class="meta-label">时间信息</span>
-            <div class="time-info">
-                <span>📅 创建: 2026-04-01</span>
-                <span>✏️ 更新: 2026-04-01</span>
-            <span class="usage-count">📊 2 次</span></div></div></div></div>
+    </div>
+</div>
 
-<!-- requirement-evaluator -->
 <div class="skill-card" data-category="business" data-name="requirement-evaluator">
     <div class="skill-header">
         <div class="skill-name">📋 requirement-evaluator</div>
-    <div class="skill-tags">
-        <span class="skill-location location-main">主</span>
         <span class="skill-category">业务场景</span>
     </div>
-</div>
     <div class="skill-desc">客户需求工时评估技能，基于 66 个历史项目数据，支持可行性分析、人天估算、报价。</div>
     <div class="skill-meta">
         <div class="meta-item">
@@ -933,231 +749,16 @@
             <div class="time-info">
                 <span>📅 创建: 2026-04-01</span>
                 <span>✏️ 更新: 2026-04-01</span>
-            <span class="usage-count zero">💤 未使用</span></div></div></div></div>
-
-<!-- scrm-admin -->
-<div class="skill-card" data-category="wecom" data-name="scrm-admin">
-    <div class="skill-header">
-        <div class="skill-name">👥 scrm-admin</div>
-    <div class="skill-tags">
-        <span class="skill-location location-main">主</span>
-        <span class="skill-category">企业微信</span>
+            </div>
+        </div>
     </div>
 </div>
-    <div class="skill-desc">SCRM 开放平台能力，支持查询客户、员工、客户群、群发任务、SOP、素材、待办、客服等。</div>
-    <div class="skill-meta">
-        <div class="meta-item">
-            <span class="meta-label">触发词</span>
-            <div class="trigger-list">
-                <span class="trigger-tag">SCRM</span>
-                <span class="trigger-tag">客户</span>
-                <span class="trigger-tag">员工</span>
-                <span class="trigger-tag">群发</span>
-                <span class="trigger-tag">SOP</span>
-            </div>
-        </div>
-        <div class="meta-item">
-            <span class="meta-label">使用场景</span>
-            <span class="meta-value">SCRM 数据查询、客户管理、员工管理、群发任务、素材管理</span>
-        </div>
-        <div class="meta-item">
-            <span class="meta-label">时间信息</span>
-            <div class="time-info">
-                <span>📅 创建: 2026-03-20</span>
-                <span>✏️ 更新: 2026-03-20</span>
-            <span class="usage-count">📊 1 次</span></div></div></div></div>
 
-<!-- scrm -->
-<div class="skill-card" data-category="wecom" data-name="scrm">
-    <div class="skill-header">
-        <div class="skill-name">👥 scrm</div>
-        <span class="skill-category">企业微信</span>
-    </div>
-    <div class="skill-desc">查询和管理微盛企微管家 SCRM 中的客户信息、客户标签、客户群、营销素材、活码、群发、跟进记录等。</div>
-    <div class="skill-meta">
-        <div class="meta-item">
-            <span class="meta-label">触发词</span>
-            <div class="trigger-list">
-                <span class="trigger-tag">客户信息</span>
-                <span class="trigger-tag">客户标签</span>
-                <span class="trigger-tag">客户群</span>
-                <span class="trigger-tag">跟进记录</span>
-                <span class="trigger-tag">会话存档</span>
-            </div>
-        </div>
-        <div class="meta-item">
-            <span class="meta-label">使用场景</span>
-            <span class="meta-value">客户运营、社群营销、SCRM 管理、会话管理、商机跟进</span>
-        </div>
-        <div class="meta-item">
-            <span class="meta-label">时间信息</span>
-            <div class="time-info">
-                <span>📅 创建: 2026-04-21</span>
-                <span>✏️ 更新: 2026-04-21</span>
-            <span class="usage-count">📊 1 次</span></div></div></div></div>
-
-<!-- self-improvement -->
-<div class="skill-card" data-category="system" data-name="self-improvement">
-    <div class="skill-header">
-        <div class="skill-name">📈 self-improvement</div>
-    <div class="skill-tags">
-        <span class="skill-location location-main">主</span>
-        <span class="skill-category">系统管理</span>
-    </div>
-</div>
-    <div class="skill-desc">捕获学习、错误和纠正，实现持续改进。用于命令失败、用户纠正、能力缺失、外部 API 失败等场景。</div>
-    <div class="skill-meta">
-        <div class="meta-item">
-            <span class="meta-label">触发词</span>
-            <div class="trigger-list">
-                <span class="trigger-tag">命令执行失败</span>
-                <span class="trigger-tag">用户纠正</span>
-                <span class="trigger-tag">发现更好的方法</span>
-            </div>
-        </div>
-        <div class="meta-item">
-            <span class="meta-label">使用场景</span>
-            <span class="meta-value">命令失败记录、错误纠正、经验积累、复杂任务前回顾</span>
-        </div>
-        <div class="meta-item">
-            <span class="meta-label">时间信息</span>
-            <div class="time-info">
-                <span>📅 创建: 2026-03-13</span>
-                <span>✏️ 更新: 2026-03-13</span>
-            <span class="usage-count zero">💤 未使用</span></div></div></div></div>
-
-<!-- skill-creator -->
-<div class="skill-card" data-category="system" data-name="skill-creator">
-    <div class="skill-header">
-        <div class="skill-name">🛠️ skill-creator</div>
-    <div class="skill-tags">
-        <span class="skill-location location-main">主</span>
-        <span class="skill-category">系统管理</span>
-    </div>
-</div>
-    <div class="skill-desc">创建新 Skill、修改和优化现有 Skill，支持测试用例、基准评测与触发词优化。</div>
-    <div class="skill-meta">
-        <div class="meta-item">
-            <span class="meta-label">触发词</span>
-            <div class="trigger-list">
-                <span class="trigger-tag">创建skill</span>
-                <span class="trigger-tag">优化skill</span>
-                <span class="trigger-tag">编辑skill</span>
-                <span class="trigger-tag">测试skill</span>
-            </div>
-        </div>
-        <div class="meta-item">
-            <span class="meta-label">使用场景</span>
-            <span class="meta-value">从零设计新 Skill、补全 SKILL.md、增加评测、优化触发词</span>
-        </div>
-        <div class="meta-item">
-            <span class="meta-label">时间信息</span>
-            <div class="time-info">
-                <span>📅 创建: 2026-03-27</span>
-                <span>✏️ 更新: 2026-03-27</span>
-            <span class="usage-count">📊 1 次</span></div></div></div></div>
-
-<!-- skill-dashboard -->
-<div class="skill-card" data-category="system" data-name="skill-dashboard">
-    <div class="skill-header">
-        <div class="skill-name">📊 skill-dashboard</div>
-    <div class="skill-tags">
-        <span class="skill-location location-main">主</span>
-        <span class="skill-category">系统管理</span>
-    </div>
-</div>
-    <div class="skill-desc">生成/更新 OpenClaw 已安装 Skill 的详细看板，部署到固定的 GitHub Pages 地址。</div>
-    <div class="skill-meta">
-        <div class="meta-item">
-            <span class="meta-label">触发词</span>
-            <div class="trigger-list">
-                <span class="trigger-tag">更新看板</span>
-                <span class="trigger-tag">生成技能看板</span>
-                <span class="trigger-tag">看板统计</span>
-                <span class="trigger-tag">技能统计</span>
-            </div>
-        </div>
-        <div class="meta-item">
-            <span class="meta-label">使用场景</span>
-            <span class="meta-value">查看已安装 Skill 清单、统计 Skill 信息、生成分享链接、定期更新看板</span>
-        </div>
-        <div class="meta-item">
-            <span class="meta-label">时间信息</span>
-            <div class="time-info">
-                <span>📅 创建: 2026-04-28</span>
-                <span>✏️ 更新: 2026-04-28</span>
-            <span class="usage-count">📊 2 次</span></div></div></div></div>
-
-<!-- software-copyright -->
-<div class="skill-card" data-category="business" data-name="software-copyright">
-    <div class="skill-header">
-        <div class="skill-name">📜 software-copyright</div>
-    <div class="skill-tags">
-        <span class="skill-location location-main">主</span>
-        <span class="skill-category">业务场景</span>
-    </div>
-</div>
-    <div class="skill-desc">生成软件著作权申请材料，包括登记信息表、操作手册、源代码文档（10000-15000 行，200-350 页）。</div>
-    <div class="skill-meta">
-        <div class="meta-item">
-            <span class="meta-label">触发词</span>
-            <div class="trigger-list">
-                <span class="trigger-tag">申请软著</span>
-                <span class="trigger-tag">生成软著材料</span>
-                <span class="trigger-tag">软著申请</span>
-                <span class="trigger-tag">软著操作手册</span>
-            </div>
-        </div>
-        <div class="meta-item">
-            <span class="meta-label">使用场景</span>
-            <span class="meta-value">软件著作权申请、登记表生成、操作手册编写、源码文档整理</span>
-        </div>
-        <div class="meta-item">
-            <span class="meta-label">时间信息</span>
-            <div class="time-info">
-                <span>📅 创建: 2026-04-22</span>
-                <span>✏️ 更新: 2026-04-23</span>
-            <span class="usage-count">📊 2 次</span></div></div></div></div>
-
-<!-- team-weekly-report -->
-<div class="skill-card" data-category="wecom" data-name="team-weekly-report">
-    <div class="skill-header">
-        <div class="skill-name">📊 team-weekly-report</div>
-    <div class="skill-tags">
-        <span class="skill-location location-main">主</span>
-        <span class="skill-category">企业微信</span>
-    </div>
-</div>
-    <div class="skill-desc">生成业务二组人员投入周报，包含任务投入分析和售后 Bug 分析，支持创建企微在线文档。</div>
-    <div class="skill-meta">
-        <div class="meta-item">
-            <span class="meta-label">触发词</span>
-            <div class="trigger-list">
-                <span class="trigger-tag">生成周报</span>
-                <span class="trigger-tag">业务二组周报</span>
-                <span class="trigger-tag">人员投入报告</span>
-            </div>
-        </div>
-        <div class="meta-item">
-            <span class="meta-label">使用场景</span>
-            <span class="meta-value">周报生成、人员投入分析、Bug 统计、在线文档创建</span>
-        </div>
-        <div class="meta-item">
-            <span class="meta-label">时间信息</span>
-            <div class="time-info">
-                <span>📅 创建: 2026-04-17</span>
-                <span>✏️ 更新: 2026-04-24</span>
-            <span class="usage-count">📊 3 次</span></div></div></div></div>
-
-<!-- tencent-news -->
 <div class="skill-card" data-category="search" data-name="tencent-news">
     <div class="skill-header">
         <div class="skill-name">📰 tencent-news</div>
-    <div class="skill-tags">
-        <span class="skill-location location-main">主</span>
         <span class="skill-category">网络搜索</span>
     </div>
-</div>
     <div class="skill-desc">获取 7×24 新闻资讯，聚焦中国国内信息和国际热点，支持热点新闻、早报晚报、实时资讯、新闻榜单。</div>
     <div class="skill-meta">
         <div class="meta-item">
@@ -1179,48 +780,339 @@
             <div class="time-info">
                 <span>📅 创建: 2026-03-31</span>
                 <span>✏️ 更新: 2026-03-31</span>
-            <span class="usage-count zero">💤 未使用</span></div></div></div></div>
-
-<!-- todo-manager -->
-<div class="skill-card" data-category="system" data-name="todo-manager">
-    <div class="skill-header">
-        <div class="skill-name">✅ todo-manager</div>
-    <div class="skill-tags">
-        <span class="skill-location location-main">主</span>
-        <span class="skill-category">系统管理</span>
+            </div>
+        </div>
     </div>
 </div>
-    <div class="skill-desc">管理待办事项，支持添加、查看、完成、删除待办。</div>
+
+<div class="skill-card" data-category="image" data-name="image-gen">
+    <div class="skill-header">
+        <div class="skill-name">🖼️ image-gen</div>
+        <span class="skill-category">图像设计</span>
+    </div>
+    <div class="skill-desc">AI 图像生成，支持 OpenAI、Google、阿里云、Replicate、OpenRouter、火山引擎等多平台。</div>
     <div class="skill-meta">
         <div class="meta-item">
             <span class="meta-label">触发词</span>
             <div class="trigger-list">
-                <span class="trigger-tag">待办</span>
-                <span class="trigger-tag">todo</span>
-                <span class="trigger-tag">添加待办</span>
-                <span class="trigger-tag">查看待办</span>
+                <span class="trigger-tag">画图</span>
+                <span class="trigger-tag">生成图片</span>
+                <span class="trigger-tag">AI作图</span>
+                <span class="trigger-tag">生成插画</span>
             </div>
         </div>
         <div class="meta-item">
             <span class="meta-label">使用场景</span>
-            <span class="meta-value">记录临时任务、维护工作清单、跟踪执行状态</span>
+            <span class="meta-value">生成插画、封面图、配图、海报草图、参考图改写、批量生成</span>
         </div>
         <div class="meta-item">
             <span class="meta-label">时间信息</span>
             <div class="time-info">
-                <span>📅 创建: 2026-03-12</span>
-                <span>✏️ 更新: 2026-03-12</span>
-            <span class="usage-count zero">💤 未使用</span></div></div></div></div>
+                <span>📅 创建: 2026-03-30</span>
+                <span>✏️ 更新: 2026-03-30</span>
+            </div>
+        </div>
+    </div>
+</div>
 
-<!-- wechat-article-search -->
+<div class="skill-card" data-category="wecom" data-name="wecom-doc-export">
+    <div class="skill-header">
+        <div class="skill-name">📤 wecom-doc-export</div>
+        <span class="skill-category">企业微信</span>
+    </div>
+    <div class="skill-desc">企业微信文档导出与知识库同步工具，支持导出为 PDF/Word/Excel，支持 WIKI 知识库增量同步。</div>
+    <div class="skill-meta">
+        <div class="meta-item">
+            <span class="meta-label">触发词</span>
+            <div class="trigger-list">
+                <span class="trigger-tag">导出企微文档</span>
+                <span class="trigger-tag">在线表格导出</span>
+                <span class="trigger-tag">同步企微知识库</span>
+            </div>
+        </div>
+        <div class="meta-item">
+            <span class="meta-label">使用场景</span>
+            <span class="meta-value">导出企微文档、批量备份 WIKI、转换为离线档案、迁移知识库</span>
+        </div>
+        <div class="meta-item">
+            <span class="meta-label">时间信息</span>
+            <div class="time-info">
+                <span>📅 创建: 2026-03-23</span>
+                <span>✏️ 更新: 2026-03-23</span>
+            </div>
+        </div>
+    </div>
+</div>
+
+<div class="skill-card" data-category="business" data-name="daily-quote">
+    <div class="skill-header">
+        <div class="skill-name">💬 daily-quote</div>
+        <span class="skill-category">业务场景</span>
+    </div>
+    <div class="skill-desc">每日名言推送，提供励志语录和金句。</div>
+    <div class="skill-meta">
+        <div class="meta-item">
+            <span class="meta-label">触发词</span>
+            <div class="trigger-list">
+                <span class="trigger-tag">今日名言</span>
+                <span class="trigger-tag">来句名言</span>
+                <span class="trigger-tag">励志语录</span>
+                <span class="trigger-tag">每日金句</span>
+            </div>
+        </div>
+        <div class="meta-item">
+            <span class="meta-label">使用场景</span>
+            <span class="meta-value">获取励志名言、每日推送、社交分享</span>
+        </div>
+        <div class="meta-item">
+            <span class="meta-label">时间信息</span>
+            <div class="time-info">
+                <span>📅 创建: 2026-03-21</span>
+                <span>✏️ 更新: 2026-03-21</span>
+            </div>
+        </div>
+    </div>
+</div>
+
+<div class="skill-card" data-category="system" data-name="edgeone-clawscan">
+    <div class="skill-header">
+        <div class="skill-name">🔒 edgeone-clawscan</div>
+        <span class="skill-category">系统管理</span>
+    </div>
+    <div class="skill-desc">安全扫描技能，安装新 Skill 前自动进行安全检查，像杀毒软件一样保护 AI 环境。</div>
+    <div class="skill-meta">
+        <div class="meta-item">
+            <span class="meta-label">触发词</span>
+            <div class="trigger-list">
+                <span class="trigger-tag">安全扫描</span>
+                <span class="trigger-tag">全面安全检查</span>
+                <span class="trigger-tag">检查 OpenClaw 安全</span>
+            </div>
+        </div>
+        <div class="meta-item">
+            <span class="meta-label">使用场景</span>
+            <span class="meta-value">安装新 Skill 前安全检查、定期安全审计、权限审查</span>
+        </div>
+        <div class="meta-item">
+            <span class="meta-label">时间信息</span>
+            <div class="time-info">
+                <span>📅 创建: 2026-03-21</span>
+                <span>✏️ 更新: 2026-03-21</span>
+            </div>
+        </div>
+    </div>
+</div>
+
+<div class="skill-card" data-category="system" data-name="skillhub-preference">
+    <div class="skill-header">
+        <div class="skill-name">⚙️ skillhub-preference</div>
+        <span class="skill-category">系统管理</span>
+    </div>
+    <div class="skill-desc">优先使用 skillhub 进行 Skill 发现/安装/更新，备用 clawhub。</div>
+    <div class="skill-meta">
+        <div class="meta-item">
+            <span class="meta-label">触发词</span>
+            <div class="trigger-list">
+                <span class="trigger-tag">技能偏好</span>
+                <span class="trigger-tag">skillhub</span>
+                <span class="trigger-tag">插件</span>
+            </div>
+        </div>
+        <div class="meta-item">
+            <span class="meta-label">使用场景</span>
+            <span class="meta-value">设置 Skill 发现偏好、选择安装源</span>
+        </div>
+        <div class="meta-item">
+            <span class="meta-label">时间信息</span>
+            <div class="time-info">
+                <span>📅 创建: 2026-03-21</span>
+                <span>✏️ 更新: 2026-03-21</span>
+            </div>
+        </div>
+    </div>
+</div>
+
+<div class="skill-card" data-category="system" data-name="find-skills">
+    <div class="skill-header">
+        <div class="skill-name">🔍 find-skills</div>
+        <span class="skill-category">系统管理</span>
+    </div>
+    <div class="skill-desc">Skill 发现流程，优先使用 skillhub 查找和安装技能。</div>
+    <div class="skill-meta">
+        <div class="meta-item">
+            <span class="meta-label">触发词</span>
+            <div class="trigger-list">
+                <span class="trigger-tag">找技能</span>
+                <span class="trigger-tag">find-skill</span>
+                <span class="trigger-tag">install skill</span>
+                <span class="trigger-tag">安装技能</span>
+            </div>
+        </div>
+        <div class="meta-item">
+            <span class="meta-label">使用场景</span>
+            <span class="meta-value">发现新 Skill、安装 Skill、查找技能</span>
+        </div>
+        <div class="meta-item">
+            <span class="meta-label">时间信息</span>
+            <div class="time-info">
+                <span>📅 创建: 2026-03-21</span>
+                <span>✏️ 更新: 2026-03-21</span>
+            </div>
+        </div>
+    </div>
+</div>
+
+<div class="skill-card" data-category="business" data-name="bank-moments-copywriter">
+    <div class="skill-header">
+        <div class="skill-name">💬 bank-moments-copywriter</div>
+        <span class="skill-category">业务场景</span>
+    </div>
+    <div class="skill-desc">生成银行产品朋友圈文案，强调强互动、强网感、强合规，严格满足 5 行内、每行小于 25 字的排版限制。</div>
+    <div class="skill-meta">
+        <div class="meta-item">
+            <span class="meta-label">触发词</span>
+            <div class="trigger-list">
+                <span class="trigger-tag">朋友圈文案</span>
+                <span class="trigger-tag">银行营销</span>
+                <span class="trigger-tag">营销文案</span>
+            </div>
+        </div>
+        <div class="meta-item">
+            <span class="meta-label">使用场景</span>
+            <span class="meta-value">银行产品推广、活动预热、客户经营文案、理财营销、合规改写</span>
+        </div>
+        <div class="meta-item">
+            <span class="meta-label">时间信息</span>
+            <div class="time-info">
+                <span>📅 创建: 2026-03-17</span>
+                <span>✏️ 更新: 2026-03-17</span>
+            </div>
+        </div>
+    </div>
+</div>
+
+<div class="skill-card" data-category="search" data-name="baidu-search">
+    <div class="skill-header">
+        <div class="skill-name">🔍 baidu-search</div>
+        <span class="skill-category">网络搜索</span>
+    </div>
+    <div class="skill-desc">使用百度 AI 搜索引擎（BDSE）进行网页搜索，支持关键词查询、时间范围过滤、结果数量控制。</div>
+    <div class="skill-meta">
+        <div class="meta-item">
+            <span class="meta-label">触发词</span>
+            <div class="trigger-list">
+                <span class="trigger-tag">搜索</span>
+                <span class="trigger-tag">百度搜索</span>
+                <span class="trigger-tag">联网搜索</span>
+            </div>
+        </div>
+        <div class="meta-item">
+            <span class="meta-label">使用场景</span>
+            <span class="meta-value">获取最新资讯、搜索特定主题资料、时间范围内信息检索、批量搜索</span>
+        </div>
+        <div class="meta-item">
+            <span class="meta-label">时间信息</span>
+            <div class="time-info">
+                <span>📅 创建: 2026-03-15</span>
+                <span>✏️ 更新: 2026-03-15</span>
+            </div>
+        </div>
+    </div>
+</div>
+
+<div class="skill-card" data-category="image" data-name="excalidraw-presentation-generator">
+    <div class="skill-header">
+        <div class="skill-name">🎨 excalidraw-presentation-generator</div>
+        <span class="skill-category">图像设计</span>
+    </div>
+    <div class="skill-desc">创建专业的 Excalidraw 演示文稿和图表，适合技术讲解、教学材料、流程说明。</div>
+    <div class="skill-meta">
+        <div class="meta-item">
+            <span class="meta-label">触发词</span>
+            <div class="trigger-list">
+                <span class="trigger-tag">创建演示文稿</span>
+                <span class="trigger-tag">生成 Excalidraw</span>
+                <span class="trigger-tag">画个架构图</span>
+                <span class="trigger-tag">做个示意图</span>
+            </div>
+        </div>
+        <div class="meta-item">
+            <span class="meta-label">使用场景</span>
+            <span class="meta-value">技术演示、教学培训、架构图、流程图、概念示意图</span>
+        </div>
+        <div class="meta-item">
+            <span class="meta-label">时间信息</span>
+            <div class="time-info">
+                <span>📅 创建: 2026-03-14</span>
+                <span>✏️ 更新: 2026-03-14</span>
+            </div>
+        </div>
+    </div>
+</div>
+
+<div class="skill-card" data-category="system" data-name="self-improvement">
+    <div class="skill-header">
+        <div class="skill-name">📈 self-improvement</div>
+        <span class="skill-category">系统管理</span>
+    </div>
+    <div class="skill-desc">捕获学习、错误和纠正，实现持续改进。用于命令失败、用户纠正、能力缺失、外部 API 失败等场景。</div>
+    <div class="skill-meta">
+        <div class="meta-item">
+            <span class="meta-label">触发词</span>
+            <div class="trigger-list">
+                <span class="trigger-tag">命令执行失败</span>
+                <span class="trigger-tag">用户纠正</span>
+                <span class="trigger-tag">发现更好的方法</span>
+            </div>
+        </div>
+        <div class="meta-item">
+            <span class="meta-label">使用场景</span>
+            <span class="meta-value">命令失败记录、错误纠正、经验积累、复杂任务前回顾</span>
+        </div>
+        <div class="meta-item">
+            <span class="meta-label">时间信息</span>
+            <div class="time-info">
+                <span>📅 创建: 2026-03-13</span>
+                <span>✏️ 更新: 2026-03-13</span>
+            </div>
+        </div>
+    </div>
+</div>
+
+<div class="skill-card" data-category="doc" data-name="humanize">
+    <div class="skill-header">
+        <div class="skill-name">✍️ humanize</div>
+        <span class="skill-category">文档内容</span>
+    </div>
+    <div class="skill-desc">将 AI 生成的文本转换为自然人类风格，绕过 GPTZero、Turnitin、Originality.ai 等检测器。</div>
+    <div class="skill-meta">
+        <div class="meta-item">
+            <span class="meta-label">触发词</span>
+            <div class="trigger-list">
+                <span class="trigger-tag">人类化</span>
+                <span class="trigger-tag">AI检测</span>
+                <span class="trigger-tag">润色</span>
+            </div>
+        </div>
+        <div class="meta-item">
+            <span class="meta-label">使用场景</span>
+            <span class="meta-value">润色 AI 草稿、优化论文语气、降低检测命中率、让文案更自然</span>
+        </div>
+        <div class="meta-item">
+            <span class="meta-label">时间信息</span>
+            <div class="time-info">
+                <span>📅 创建: 2026-03-13</span>
+                <span>✏️ 更新: 2026-03-13</span>
+            </div>
+        </div>
+    </div>
+</div>
+
 <div class="skill-card" data-category="search" data-name="wechat-article-search">
     <div class="skill-header">
         <div class="skill-name">🔍 wechat-article-search</div>
-    <div class="skill-tags">
-        <span class="skill-location location-main">主</span>
         <span class="skill-category">网络搜索</span>
     </div>
-</div>
     <div class="skill-desc">搜索微信公众号文章，覆盖科技/AI、社会热点、财经、教育、职场等各类中文资讯。</div>
     <div class="skill-meta">
         <div class="meta-item">
@@ -1240,9 +1132,11 @@
             <div class="time-info">
                 <span>📅 创建: 2026-03-12</span>
                 <span>✏️ 更新: 2026-03-12</span>
-            <span class="usage-count zero">💤 未使用</span></div></div></div></div>
+            </div>
+        </div>
+    </div>
+</div>
 
-<!-- wechat-article -->
 <div class="skill-card" data-category="search" data-name="wechat-article">
     <div class="skill-header">
         <div class="skill-name">📰 wechat-article</div>
@@ -1267,47 +1161,46 @@
             <div class="time-info">
                 <span>📅 创建: 2026-03-12</span>
                 <span>✏️ 更新: 2026-03-12</span>
-            <span class="usage-count zero">💤 未使用</span></div></div></div></div>
-
-<!-- wecom-doc-export -->
-<div class="skill-card" data-category="wecom" data-name="wecom-doc-export">
-    <div class="skill-header">
-        <div class="skill-name">📤 wecom-doc-export</div>
-    <div class="skill-tags">
-        <span class="skill-location location-main">主</span>
-        <span class="skill-category">企业微信</span>
+            </div>
+        </div>
     </div>
 </div>
-    <div class="skill-desc">企业微信文档导出与知识库同步工具，支持导出为 PDF/Word/Excel，支持 WIKI 知识库增量同步。</div>
+
+<div class="skill-card" data-category="system" data-name="todo-manager">
+    <div class="skill-header">
+        <div class="skill-name">✅ todo-manager</div>
+        <span class="skill-category">系统管理</span>
+    </div>
+    <div class="skill-desc">管理待办事项，支持添加、查看、完成、删除待办。</div>
     <div class="skill-meta">
         <div class="meta-item">
             <span class="meta-label">触发词</span>
             <div class="trigger-list">
-                <span class="trigger-tag">导出企微文档</span>
-                <span class="trigger-tag">在线表格导出</span>
-                <span class="trigger-tag">同步企微知识库</span>
+                <span class="trigger-tag">待办</span>
+                <span class="trigger-tag">todo</span>
+                <span class="trigger-tag">添加待办</span>
+                <span class="trigger-tag">查看待办</span>
             </div>
         </div>
         <div class="meta-item">
             <span class="meta-label">使用场景</span>
-            <span class="meta-value">导出企微文档、批量备份 WIKI、转换为离线档案、迁移知识库</span>
+            <span class="meta-value">记录临时任务、维护工作清单、跟踪执行状态</span>
         </div>
         <div class="meta-item">
             <span class="meta-label">时间信息</span>
             <div class="time-info">
-                <span>📅 创建: 2026-03-23</span>
-                <span>✏️ 更新: 2026-03-23</span>
-            <span class="usage-count zero">💤 未使用</span></div></div></div></div>
+                <span>📅 创建: 2026-03-12</span>
+                <span>✏️ 更新: 2026-03-12</span>
+            </div>
+        </div>
+    </div>
+</div>
 
-<!-- wecom-doc-smartsheet-sync -->
 <div class="skill-card" data-category="wecom" data-name="wecom-doc-smartsheet-sync">
     <div class="skill-header">
         <div class="skill-name">📝 wecom-doc-smartsheet-sync</div>
-    <div class="skill-tags">
-        <span class="skill-location location-main">主</span>
         <span class="skill-category">企业微信</span>
     </div>
-</div>
     <div class="skill-desc">使用企业微信智能机器人文档权限，通过 MCP 新建企微文档、写入内容，创建和写入智能表格。</div>
     <div class="skill-meta">
         <div class="meta-item">
@@ -1327,17 +1220,106 @@
             <div class="time-info">
                 <span>📅 创建: 2026-03-12</span>
                 <span>✏️ 更新: 2026-03-12</span>
-            <span class="usage-count zero">💤 未使用</span></div></div></div></div>
+            </div>
+        </div>
+    </div>
+</div>
 
-<!-- dev-assistant/code-analysis -->
+<div class="skill-card" data-category="doc" data-name="frontend-slides">
+    <div class="skill-header">
+        <div class="skill-name">📊 frontend-slides</div>
+        <span class="skill-category">文档内容</span>
+    </div>
+    <div class="skill-desc">创建动画丰富的 HTML 演示文稿，支持从零生成或转换 PowerPoint 文件。</div>
+    <div class="skill-meta">
+        <div class="meta-item">
+            <span class="meta-label">触发词</span>
+            <div class="trigger-list">
+                <span class="trigger-tag">build presentation</span>
+                <span class="trigger-tag">convert PPTX</span>
+                <span class="trigger-tag">create slides</span>
+            </div>
+        </div>
+        <div class="meta-item">
+            <span class="meta-label">使用场景</span>
+            <span class="meta-value">制作演示文稿、PPTX 转网页、创建动画展示页</span>
+        </div>
+        <div class="meta-item">
+            <span class="meta-label">时间信息</span>
+            <div class="time-info">
+                <span>📅 创建: 2026-03-12</span>
+                <span>✏️ 更新: 2026-03-12</span>
+            </div>
+        </div>
+    </div>
+</div>
+
+<div class="skill-card" data-category="doc" data-name="coze-app-reply">
+    <div class="skill-header">
+        <div class="skill-name">🤖 coze-app-reply</div>
+        <span class="skill-category">文档内容</span>
+    </div>
+    <div class="skill-desc">调用 Coze（扣子）已发布为 API 服务的应用/智能体，发送用户消息并获取 AI 回复。</div>
+    <div class="skill-meta">
+        <div class="meta-item">
+            <span class="meta-label">触发词</span>
+            <div class="trigger-list">
+                <span class="trigger-tag">调用 Coze 应用</span>
+                <span class="trigger-tag">问扣子</span>
+                <span class="trigger-tag">Coze API 回复</span>
+                <span class="trigger-tag">使用 Coze 智能体</span>
+            </div>
+        </div>
+        <div class="meta-item">
+            <span class="meta-label">使用场景</span>
+            <span class="meta-value">调用 Coze 应用生成文案、摘要、问答；调试 Coze API</span>
+        </div>
+        <div class="meta-item">
+            <span class="meta-label">时间信息</span>
+            <div class="time-info">
+                <span>📅 创建: 2026-03-12</span>
+                <span>✏️ 更新: 2026-03-12</span>
+            </div>
+        </div>
+    </div>
+</div>
+
+<div class="skill-card" data-category="doc" data-name="dokie-ai-ppt">
+    <div class="skill-header">
+        <div class="skill-name">📊 dokie-ai-ppt</div>
+        <span class="skill-category">文档内容</span>
+    </div>
+    <div class="skill-desc">AI 演示文稿生成器，通过对话创建专业 HTML 幻灯片。</div>
+    <div class="skill-meta">
+        <div class="meta-item">
+            <span class="meta-label">触发词</span>
+            <div class="trigger-list">
+                <span class="trigger-tag">create PPT</span>
+                <span class="trigger-tag">presentation</span>
+                <span class="trigger-tag">slides</span>
+                <span class="trigger-tag">keynote</span>
+                <span class="trigger-tag">pitch deck</span>
+            </div>
+        </div>
+        <div class="meta-item">
+            <span class="meta-label">使用场景</span>
+            <span class="meta-value">制作演示文稿、将 PPTX 转为网页、创建带动画的展示页</span>
+        </div>
+        <div class="meta-item">
+            <span class="meta-label">时间信息</span>
+            <div class="time-info">
+                <span>📅 创建: 2026-03-12</span>
+                <span>✏️ 更新: 2026-03-12</span>
+            </div>
+        </div>
+    </div>
+</div>
+
 <div class="skill-card" data-category="dev" data-name="dev-assistant-code-analysis">
     <div class="skill-header">
         <div class="skill-name">🔍 dev-assistant/code-analysis</div>
-    <div class="skill-tags">
-        <span class="skill-location location-sub">子 → dev-assistant</span>
         <span class="skill-category">开发工具</span>
     </div>
-</div>
     <div class="skill-desc">代码分析技能，用于分析代码结构、质量、依赖关系等。</div>
     <div class="skill-meta">
         <div class="meta-item">
@@ -1356,18 +1338,16 @@
             <span class="meta-label">时间信息</span>
             <div class="time-info">
                 <span>📅 创建: 2026-03-12</span>
-                <span>✏️ 更新: 2026-03-12</span>
-            <span class="usage-count zero">💤 未使用</span></div></div></div></div>
+            </div>
+        </div>
+    </div>
+</div>
 
-<!-- dev-assistant/git-clone -->
 <div class="skill-card" data-category="dev" data-name="dev-assistant-git-clone">
     <div class="skill-header">
         <div class="skill-name">📥 dev-assistant/git-clone</div>
-    <div class="skill-tags">
-        <span class="skill-location location-sub">子 → dev-assistant</span>
         <span class="skill-category">开发工具</span>
     </div>
-</div>
     <div class="skill-desc">Git 仓库克隆技能，快速克隆远程仓库到本地。</div>
     <div class="skill-meta">
         <div class="meta-item">
@@ -1385,18 +1365,16 @@
             <span class="meta-label">时间信息</span>
             <div class="time-info">
                 <span>📅 创建: 2026-03-12</span>
-                <span>✏️ 更新: 2026-03-12</span>
-            <span class="usage-count zero">💤 未使用</span></div></div></div></div>
+            </div>
+        </div>
+    </div>
+</div>
 
-<!-- dev-assistant/project-bootstrap -->
 <div class="skill-card" data-category="dev" data-name="dev-assistant-project-bootstrap">
     <div class="skill-header">
         <div class="skill-name">🚀 dev-assistant/project-bootstrap</div>
-    <div class="skill-tags">
-        <span class="skill-location location-sub">子 → dev-assistant</span>
         <span class="skill-category">开发工具</span>
     </div>
-</div>
     <div class="skill-desc">项目初始化技能，快速搭建新项目的基础结构。</div>
     <div class="skill-meta">
         <div class="meta-item">
@@ -1415,18 +1393,16 @@
             <span class="meta-label">时间信息</span>
             <div class="time-info">
                 <span>📅 创建: 2026-03-12</span>
-                <span>✏️ 更新: 2026-03-12</span>
-            <span class="usage-count zero">💤 未使用</span></div></div></div></div>
+            </div>
+        </div>
+    </div>
+</div>
 
-<!-- dev-assistant/scaffold-generator -->
 <div class="skill-card" data-category="dev" data-name="dev-assistant-scaffold-generator">
     <div class="skill-header">
         <div class="skill-name">🏗️ dev-assistant/scaffold-generator</div>
-    <div class="skill-tags">
-        <span class="skill-location location-sub">子 → dev-assistant</span>
         <span class="skill-category">开发工具</span>
     </div>
-</div>
     <div class="skill-desc">脚手架生成器，根据模板生成项目结构和代码。</div>
     <div class="skill-meta">
         <div class="meta-item">
@@ -1445,83 +1421,19 @@
             <span class="meta-label">时间信息</span>
             <div class="time-info">
                 <span>📅 创建: 2026-03-12</span>
-                <span>✏️ 更新: 2026-03-12</span>
-            <span class="usage-count zero">💤 未使用</span></div></div></div></div>
-
-<!-- find-skills -->
-<div class="skill-card" data-category="system" data-name="find-skills">
-    <div class="skill-header">
-        <div class="skill-name">🔍 find-skills</div>
-    <div class="skill-tags">
-        <span class="skill-location location-workspace">工作区</span>
-        <span class="skill-category">系统管理</span>
-    </div>
-</div>
-    <div class="skill-desc">Skill 发现流程，优先使用 skillhub 查找和安装技能。</div>
-    <div class="skill-meta">
-        <div class="meta-item">
-            <span class="meta-label">触发词</span>
-            <div class="trigger-list">
-                <span class="trigger-tag">找技能</span>
-                <span class="trigger-tag">find-skill</span>
-                <span class="trigger-tag">install skill</span>
-                <span class="trigger-tag">安装技能</span>
             </div>
         </div>
-        <div class="meta-item">
-            <span class="meta-label">使用场景</span>
-            <span class="meta-value">发现新 Skill、安装 Skill、查找技能</span>
-        </div>
-        <div class="meta-item">
-            <span class="meta-label">时间信息</span>
-            <div class="time-info">
-                <span>📅 创建: 2026-03-21</span>
-                <span>✏️ 更新: 2026-03-21</span>
-            <span class="usage-count zero">💤 未使用</span></div></div></div></div>
-
-<!-- skillhub-preference -->
-<div class="skill-card" data-category="system" data-name="skillhub-preference">
-    <div class="skill-header">
-        <div class="skill-name">⚙️ skillhub-preference</div>
-    <div class="skill-tags">
-        <span class="skill-location location-workspace">工作区</span>
-        <span class="skill-category">系统管理</span>
     </div>
 </div>
-    <div class="skill-desc">优先使用 skillhub 进行 Skill 发现/安装/更新，备用 clawhub。</div>
-    <div class="skill-meta">
-        <div class="meta-item">
-            <span class="meta-label">触发词</span>
-            <div class="trigger-list">
-                <span class="trigger-tag">技能偏好</span>
-                <span class="trigger-tag">skillhub</span>
-                <span class="trigger-tag">插件</span>
-            </div>
-        </div>
-        <div class="meta-item">
-            <span class="meta-label">使用场景</span>
-            <span class="meta-value">设置 Skill 发现偏好、选择安装源</span>
-        </div>
-        <div class="meta-item">
-            <span class="meta-label">时间信息</span>
-            <div class="time-info">
-                <span>📅 创建: 2026-03-21</span>
-                <span>✏️ 更新: 2026-03-21</span>
-            <span class="usage-count zero">💤 未使用</span></div></div></div></div>
-
-        </div>
 
         <div class="footer">
-            <p>OpenClaw Skill 详细看板 | 发现更多技能：<a href="https://clawhub.ai" target="_blank">ClawHub</a></p>
-            <p style="margin-top: 10px; font-size: 0.8em; color: #999;">✅ 使用次数统计已实现：每次使用 Skill 自动记录，更新看板时同步显示</p>
-            <p style="margin-top: 5px; font-size: 0.75em; color: #aaa;">统计文件：~/.openclaw/skill-usage.json | 固定地址：sanshui90.github.io/skill-dashboard/</p>
-        </div>
+        <p>OpenClaw Skill 详细看板 | 发现更多技能：<a href="https://clawhub.ai" target="_blank">ClawHub</a></p>
+        <p style="margin-top: 10px; font-size: 0.8em; color: #999;">注：使用次数统计暂未实现，后续可通过日志分析添加</p>
     </div>
 
     <script>
         // 更新可见数量的函数
         function updateVisibleCount() {
-            const visibleCards = document.querySelectorAll('.skill-card[style="display: block"], .skill-card:not([style])');
             let count = 0;
             document.querySelectorAll('.skill-card').forEach(card => {
                 if (card.style.display !== 'none') {
@@ -1546,9 +1458,6 @@
                     card.style.display = 'none';
                 }
             });
-            
-            // 更新计数
-            updateVisibleCount();
         }
 
         function searchSkill() {
@@ -1561,9 +1470,6 @@
                     card.style.display = 'none';
                 }
             });
-            
-            // 更新计数
-            updateVisibleCount();
         }
     </script>
 </body>
