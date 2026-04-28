@@ -38,6 +38,21 @@
         .stats-bar, .filter-bar, .skill-list {
             text-align: left;
         }
+        .result-stats {
+            background: white;
+            padding: 12px 20px;
+            border-radius: 8px;
+            margin-bottom: 15px;
+            box-shadow: 0 2px 8px rgba(0,0,0,0.05);
+        }
+        .result-stats .stats-text {
+            color: #666;
+            font-size: 0.9em;
+        }
+        .result-stats strong {
+            color: #667eea;
+            font-size: 1.2em;
+        }
         .stats-bar {
             display: grid;
             grid-template-columns: repeat(auto-fit, minmax(180px, 1fr));
@@ -293,6 +308,10 @@
             <div class="search-box">
                 <input type="text" id="searchInput" placeholder="搜索 Skill 名称、描述、触发词..." onkeyup="searchSkill()">
             </div>
+        </div>
+        
+        <div class="result-stats">
+            <span class="stats-text">当前显示：<strong id="visibleCount">39</strong> 个 Skill</span>
         </div>
 
         <div class="skill-list" id="skillList">
@@ -1500,6 +1519,18 @@
     </div>
 
     <script>
+        // 更新可见数量的函数
+        function updateVisibleCount() {
+            const visibleCards = document.querySelectorAll('.skill-card[style="display: block"], .skill-card:not([style])');
+            let count = 0;
+            document.querySelectorAll('.skill-card').forEach(card => {
+                if (card.style.display !== 'none') {
+                    count++;
+                }
+            });
+            document.getElementById('visibleCount').textContent = count;
+        }
+
         function filterSkill(category) {
             // 更新按钮状态
             document.querySelectorAll('.filter-btn').forEach(btn => {
@@ -1515,6 +1546,9 @@
                     card.style.display = 'none';
                 }
             });
+            
+            // 更新计数
+            updateVisibleCount();
         }
 
         function searchSkill() {
@@ -1527,6 +1561,9 @@
                     card.style.display = 'none';
                 }
             });
+            
+            // 更新计数
+            updateVisibleCount();
         }
     </script>
 </body>
